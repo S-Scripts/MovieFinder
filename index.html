@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" class="radiuss" href="icon.logo.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <a href=""><img src="movieFinder.png" class="logo" alt=""></a>
+        <div class="search-flex">
+            <input class="search" onchange="searchMovie()" type="text" id="movieName" placeholder="Search any movie..">
+            <button class="search-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="notFound" class="d-none">
+        <h2 class="nf-title">Couldn't find "<span id="name"></span>"!</h2>
+        <p class="nf-desc">Try searching for something else or try with a different spelling</p>
+    </div>
+
+
+     <!-- create a dummy data and then add values -->
+     <!-- where alll you need to inject value..use span tag -->
+
+    <div id="found" class="movieContainer d-none">
+        <div>
+            <h1 class="title" id="title">Avengers Endgame</h1>
+            <p>Rated: <span id="rated"></span></p>
+            <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dicta dolorum rem nihil. Autem, alias.</p>   
+            <p>Released on: <span id="date"></span></p>
+            <p>Runtime: <span id="time"></span></p>
+            <p>Genre: <span id="genre"></span></p>
+            <p>Director: <span id="director"></span></p>
+            <p>Writer: <span id="writer"></span></p>
+            <p>Actors: <span id="actors"></span></p>
+            <p>Language: <span id="language"></span></p>
+            <p>Awards: <span id="awards"></span></p>
+        </div>
+        <img class="poster" id="poster" src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" alt="">
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
